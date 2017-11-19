@@ -1,0 +1,105 @@
+   body{
+    margin:auto;
+    padding:auto;
+    border: none;
+   }
+
+    .Title{
+      margin: auto;
+      display: block;
+      line-height: 3;
+      font-family: "Century Gothic"; 
+      font-size: 30px;
+      font-style: normal;
+      font-weight: lighter;
+      letter-spacing: 5px;
+      word-spacing: 11px;
+      text-decoration: none;      
+      text-transform: capitalize;
+      text-shadow: 2px -2px 1px grey;
+      color: black;
+   }
+
+   p {
+      float: none;
+      margin-bottom: 20px;
+      margin-left: 12px;
+      line-height: 40px;
+      font-family: Papyrus;           
+      font-size: 30px;
+      font-style: normal;
+      font-weight: bold;
+      letter-spacing: 5px;
+      word-spacing: 10px;
+      text-decoration: none;
+      color: #d33c44;  
+   }
+
+   p + p{
+      font-family: Papyrus;           
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400px;      
+      word-spacing: 10px;      
+      color: #000000;  
+   }
+
+   label {
+      font-family: "Times New Roman";           
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400px;      
+      word-spacing: 10px;      
+      color: #000000;  
+   }
+   
+   #Services {
+      float: right;
+      display: inline-block;
+      margin-top: -500px;
+      margin-right: 20px;
+      line-height: 2;
+      font-family: "Times New roman";
+      letter-spacing: 2px;
+      font-size: 20px;      
+      text-transform: capitalize;
+      font-style: normal;
+      font-weight: lighter;
+      text-decoration: none;
+      color: #d33c44;
+   }
+   
+   .mySlides {
+      display:none;
+      max-width:600px;
+      width: 500px;
+      height: 500px; 
+   }
+
+   .Portfolio > center {
+    margin-bottom: 20px;    
+    font-family: Papyrus;           
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    text-decoration: none;
+    color: #ffffff;
+   }
+
+   .page0{
+    background-color: #4885ed;  
+   }
+
+   .page1 {
+    background-color: #ffffff;
+    margin-top: 0.25em;
+   }
+
+   .page2 {
+    background-color: #00897B;
+    margin-top: 0.25em;
+   }
+
+   Colors : #039be5, #00897B, 

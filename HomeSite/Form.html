@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BootStrap_form</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+	<script>
+
+		function initMap() {
+			
+		  var location = new google.maps.LatLng(11.0168,76.9558);
+		  var mapCanvas = document.getElementById('googleMap');		  
+
+		  var mapOptions = {
+			center : location,
+			zoom : 14,
+			panControl : false,
+			draggable: false,
+			scrollwheel: false,
+			mapTypeId : google.maps.MapTypeId.ROADMAP    
+		  };
+
+		  var map = new google.maps.Map(mapCanvas,mapOptions);
+		  
+		  var markerImage = "img/marker.png";
+
+		  var marker = new google.maps.Marker({
+    		position: location,
+    		map : map, 
+    		icon: markerImage    		
+  		  });
+
+		  var contentString = "Pro-Resume";
+
+  		  var infowindow = new google.maps.InfoWindow({
+            content: contentString,                    
+          });
+
+          marker.addListener('click', function () {
+            infowindow.open(map, marker);
+        });
+
+		}
+
+		google.maps.event.addDomListener(window, 'load', initMap);
+
+	</script>
+
+</head>
+<body>
+
+ 										<!-- Form -->
+<div class="container-fluid">
+
+		<div class="row">
+
+		    <div class=" col-xs-12 col-sm-6 col-md-6 col-md-6 col-lg-6 ">
+
+		    	<form class="form-horizontal">
+					<label>Write to Us : </label>
+
+					  <div class="form-group">
+					    <label class="control-label col-xs-12 col-sm-2 col-md-2 col-lg-4">Name :</label>
+					    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-8">
+					      <input type="text" class="form-control" id="name" placeholder="John Dae">
+					    </div>
+					  </div>
+
+					  <div class="form-group">
+					    <label class="control-label col-xs-12 col-sm-2 col-md-2 col-lg-4">Email :</label>
+					    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-8">
+					      <input type="email" class="form-control" id="email" placeholder="sample@demo.com">
+					    </div>
+					  </div>
+
+					  <div class="form-group">
+					    <label class="control-label col-xs-12 col-sm-2 col-md-2 col-lg-4">Mobile :</label>
+					    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-8"> 
+					      <input type="number" class="form-control" id="pwd" placeholder="10 Digit Mobile number">
+					    </div>
+					  </div>
+
+					  <div class="form-group">
+					    <label class="control-label col-xs-12 col-sm-2 col-md-2 col-lg-4">You are a :</label>
+					    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-8"> 
+					      <label class="radio-inline"><input type="radio" name="role" checked>Fresher</label>
+						  <label class="radio-inline"><input type="radio" name="role">Executive</label>
+						  <label class="radio-inline"><input type="radio" name="role">Professional</label>
+					    </div>
+					  </div>
+
+					  <div class="form-group">
+					    <label class="control-label col-xs-12 col-sm-2 col-md-2 col-lg-4">Resume :</label>
+					    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-8">       
+						  <label class="radio-inline"><input type="file" id="uploadResume"></label>
+					    </div>
+					  </div>
+
+						<script>
+								$('#uploadResume').filestyle({
+									buttonName : 'btn-danger',
+					                buttonText : ' File selection'
+								});
+						</script>
+
+					  <div class="form-group">
+						<label class="control-label col-xs-12 col-sm-2 col-md-2 col-lg-4">Message !</label>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-8">
+						  <textarea class="form-control" rows="5" id="message" placeholder="Say about you in few words !"></textarea>
+						</div>
+					  </div>
+
+					  <div class="form-group"> 
+					    <div class="col-sm-offset-1 col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					      <button type="submit" class="btn btn-default">Submit</button>
+					    </div>
+					  </div>
+
+				</form>
+		    </div>
+
+			<div class=" col-xs-12 col-sm-6 col-md-6 col-md-6 col-lg-6 ">
+
+				<label>Reach us :</label>
+				<div id="googleMap" style="/*float:right;margin-top:-31em;*/width:500px;height:400px;"></div>
+	
+		    </div>
+
+		</div>
+</div>
+
+	
+
+										<!-- GoogleMapAPI -->
+				
+<div class="googleMapAPI">
+
+	<label>Reach us :</label>
+	<div id="googleMap" style="float:right;margin-top:-31em;width:500px;height:400px;"></div>
+	
+</div>
+
+
+										<!-- Contact Us-->
+
+<div class="page4">
+
+	<label>CONTACT US</label>
+	<ul>
+
+		<li>
+		<h3>Address</h3>
+		<address>
+		<p>Sai Baba Colony<br/>
+		Coimbatore,Tamil Nadu<br/>
+		India 641011</p>
+		</address>
+		</li>
+
+		<li>
+		<h3>Mail</h3>
+		<p><a href="#">proresume_services@hotmail.com</a></p>
+		</li>
+
+		<li>
+		<h3>Phone</h3>
+		<p> +919943028241</p>
+		<p> +919626030304</p>
+		</li>
+
+	</ul>
+
+</div>
+
+</body>
+</html>
